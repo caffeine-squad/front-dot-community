@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  height: 100vh;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87); 
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  
+  
+}
+
+body {
+  margin: 0;
+  /* display: flex; */
+  /* place-items: center; */
+  /* min-width: 320px; */
+  /* overflow: hidden; */
+  /* min-height: 100vh; */
+}
+div span .mantine-1gkkvdk:disabled, .mantine-1gy46q8:disabled, .mantine-wai1xk:disabled{
+    @apply text-[#62D2A2] font-bold;
+} 
+.mantine-Input-input, .mantine-PasswordInput-input, .mantine-DatePicker-day, .mantine-Input-rightSection, .mantine-Select-root{
+  border-color: #62D2A2 !important;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #000;
+  }
+  :root:focus{
+    color: #29A073;
+  }
+  a:hover {
+    color: #29A073;
+  }
+}
