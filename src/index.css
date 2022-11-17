@@ -6,8 +6,8 @@
 
 :root {
   font-family: Roboto;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 400;
   height: 100vh;
 
@@ -33,11 +33,27 @@ body {
   /* overflow: hidden; */
   /* min-height: 100vh; */
 }
+h1{
+  text-align: center;
+}
+
 div span .mantine-1gkkvdk:disabled, .mantine-1gy46q8:disabled, .mantine-wai1xk:disabled{
     @apply text-[#62D2A2] font-bold;
 } 
 .mantine-Input-input, .mantine-PasswordInput-input, .mantine-DatePicker-day, .mantine-Input-rightSection, .mantine-Select-root{
   border-color: #62D2A2 !important;
+}
+
+.mantine-1f8v7sc[data-selected]{
+  background-color: #62D2A2 !important;
+}
+
+.button-add{
+  border-radius: 2rem;
+  width: 20%;
+  justify-content: center;
+  color: #000;
+  font-weight: bold;
 }
 
 @media (prefers-color-scheme: light) {
