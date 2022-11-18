@@ -32,6 +32,7 @@ body {
   /* min-width: 320px; */
   /* overflow: hidden; */
   /* min-height: 100vh; */
+  background-color:#F7F7F7
 }
 h1{
   text-align: center;
@@ -50,7 +51,6 @@ div span .mantine-1gkkvdk:disabled, .mantine-1gy46q8:disabled, .mantine-wai1xk:d
 
 .button-add{
   border-radius: 2rem;
-  width: 20%;
   justify-content: center;
   color: #000;
   font-weight: bold;
