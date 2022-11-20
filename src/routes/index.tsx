@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate} from 'react-router-dom'
-import { Home } from '../pages'
+import { Home } from '../pages/Home'
 import { RegisterUser } from '../pages/Register'
 
 export const AppRoutes = () => {
@@ -8,6 +8,7 @@ export const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="*" element={<Navigate to="/"/>} />
       <Route path="/cadastro" element={<RegisterUser/>} />
+      <Route path="/sobre" element={<RegisterUser/>} />
     </Routes>
   )
 }
