@@ -17,9 +17,6 @@ module.exports = {
         'light-error': '#f0664a',
         'primary-gray': '#A6ABBB',
       },
-      text:{
-        'primary-accent': '#62D2A2',
-      },
       container: {
         padding: {
           DEFAULT: '1rem',
@@ -30,7 +27,7 @@ module.exports = {
         },
       },
     },
-
+    
     minHeight: {
       '1/2': '50%',
     },

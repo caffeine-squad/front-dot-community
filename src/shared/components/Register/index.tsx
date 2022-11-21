@@ -72,7 +72,7 @@ export function Register() {
           </Grid.Col>
         </Grid>
       </Line>
-      <Button className=" button-add bg-primary-accent hover:bg-secondary-accent" >
+      <Button className=" button bg-primary-accent hover:bg-secondary-accent" >
         CADASTRAR
       </Button>
     </RegisterSection>

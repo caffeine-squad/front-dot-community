@@ -8,7 +8,6 @@ export const App = () => {
   return (
     <BrowserRouter>
       <Header />
-     
       <AppRoutes />
       <Footer/>
     </BrowserRouter>
