@@ -1,8 +1,16 @@
 import { Grid, Input, PasswordInput, Image, Button, Text, Title } from "@mantine/core";
+import { Link } from "react-router-dom";
 import LoginImage from "../../../assets/login.png"
-import { Line, LoginSection } from "./styles";
+import { auth } from "../../services/authenticateService";
+import { ButtonLink, Dropdown, DropDownContent,  Line, LoginSection } from "./styles";
 
-export function Login() {
+export function LoginForm() {
+
+  const userToken = async () => {
+    const data = await auth("andrezaleal@admin", "admin")
+    console.log('aqui', data)
+  };
+
   return (
     <LoginSection>
       <Grid className="self-center">
@@ -36,12 +44,21 @@ export function Login() {
               />
             </Grid.Col>
             <Grid.Col className="flex justify-center">
-              <Button className=" button-add bg-primary-accent hover:bg-secondary-accent w-60" >
+              <Button className=" button bg-primary-accent hover:bg-secondary-accent" onClick={userToken}>
                 ENTRAR
               </Button>
             </Grid.Col>
             <Grid.Col className="flex justify-center p-0">
-              <Text fz="xs">Não Possui uma conta ?</Text>
+              <Text fz="xs" className="inline-flex">
+                Não Possui uma conta ?
+                <Dropdown>
+                  <ButtonLink>Cadastre-se</ButtonLink>
+                  <DropDownContent>
+                   <Link to='/cadastro'>Como pessoa física</Link>
+                   <Link to='/cadastro'>Como instituição</Link>
+                  </DropDownContent>
+                </Dropdown>
+              </Text>
             </Grid.Col>
           </Line>
         </Grid.Col>
