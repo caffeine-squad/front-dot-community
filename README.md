@@ -38,4 +38,4 @@ This screen can be accessed via the following route: `/cadastro`.
 ### Forum
 Screen where the user can view all topics that have already been posted on the forum. This screen can be accessed via the following route: `/forum`.
 ### Topico
-Screen to visualize a specific topic, where the user and the institution can comment. This screen can be accessed via the following route: `/forum/topico.
+Screen to visualize a specific topic, where the user and the institution can comment. This screen can be accessed via the following route: `/forum/topico`.
