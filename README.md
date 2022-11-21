@@ -1,46 +1,39 @@
-# Getting Started with Create React App
+# Front-End Dot Community
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A community where people can get informed and share content about organ donation.
 
-## Available Scripts
+## Installation
+Use the package [npm](https://https://www.npmjs.com/) to install front-end dependencies.
 
-In the project directory, you can run:
+```bash
+npm install 
+```
 
-### `npm start`
+## Environment Configuration
+For this next step it is necessary to have the `.env` file configured.Locate the `.env.example` file and rename it to .env, then modify the environment variables according to your settings.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To start the server in development mode used at address: http://localhost:8000
+```bash
+npm start
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Dependências 
+- [axios](https://axios-http.com/docs/intro)
+- [mantine](https://mantine.dev/)
+- [react](https://www.npmjs.com/package/react)
+- [react-icons](https://react-icons.github.io/react-icons)
+- [react-input-mask](https://www.npmjs.com/package/react-input-mask)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [styled-components ](https://styled-components.com/)
+- [tailwind](https://tailwindcss.com/)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Telas
+### Home
+The initial screen is the home screen, where there will be information about the organization and its collaborators, in addition to presenting the most recent forum topics. This screen can be accessed via the following route: `/`.
+### Login
+Screen to login and enter the system. This screen can be accessed via the following route: `/login`.
+### Cadastro
+Screen to create an account for an institution or a user who wants to be a donor or recipient.
+This screen can be accessed via the following route: `/cadastro`.
+### Forum
+Screen where the user can view all topics that have already been posted on the forum. This screen can be accessed via the following route: `/forum`.
