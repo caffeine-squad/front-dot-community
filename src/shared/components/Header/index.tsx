@@ -5,34 +5,34 @@ import {
   NavbarContainer,
   NavItem,
   NavMenu,
-  NavLink
+  NavLink,
 }
   from "./styles";
 
-import { Link } from "react-router-dom"
 
 export function Header() {
   return (
     <>
       <Container>
-        <Link to="/">
+        <NavLink to="/">
           <Heading>
             <Bolder>DOT</Bolder> Community
           </Heading>
-        </Link>
+        </NavLink>
         <NavbarContainer>
           <NavMenu>
             <NavItem>
-              <NavLink to='/cadastro'><span>Sobre nós</span></NavLink>
+              <NavLink to='/'><span>Sobre nós</span></NavLink>
             </NavItem>
             <NavItem>
-              <span>Forum</span>
+              <NavLink to='/forum'><span>Forum</span></NavLink>
             </NavItem>
+              <NavItem>
+                <NavLink to='/cadastro'><span>Cadastro</span></NavLink>
+              </NavItem>
+           
             <NavItem>
-              <span>Cadastro</span>
-            </NavItem>
-            <NavItem>
-              <span>Login</span>
+              <NavLink to='/login'><span>Login</span></NavLink>
             </NavItem>
           </NavMenu>
         </NavbarContainer>

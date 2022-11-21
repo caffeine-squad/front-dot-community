@@ -91,7 +91,17 @@ export const NavItem = styled.li`
     width: 100%;
     color:white
   }
-  
+  @media screen and (max-width: 768px) {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    &:hover {
+      color: #4b59f7;
+      transition: all 0.3s ease;
+    }
+  }
 `;
+
 
 
