@@ -12,26 +12,18 @@
   height: 100vh;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87); 
-
+  color: #000; 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-
-  
   
 }
 
 body {
   margin: 0;
-  /* display: flex; */
-  /* place-items: center; */
-  /* min-width: 320px; */
-  /* overflow: hidden; */
-  /* min-height: 100vh; */
   background-color:#F7F7F7
 }
 h1{
@@ -49,11 +41,12 @@ div span .mantine-1gkkvdk:disabled, .mantine-1gy46q8:disabled, .mantine-wai1xk:d
   background-color: #62D2A2 !important;
 }
 
-.button-add{
+.button{
   border-radius: 2rem;
   justify-content: center;
   color: #000;
   font-weight: bold;
+  width: 14rem;
 }
 
 @media (prefers-color-scheme: light) {
