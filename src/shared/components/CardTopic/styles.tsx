@@ -17,4 +17,5 @@ export const Card = styled.div`
 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.05) 0px 10px 15px -5px,rgba(0, 0, 0, 0.04) 0px 7px 7px -5px;
 width: 100%;
 height: auto;
+
 `

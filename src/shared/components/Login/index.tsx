@@ -44,7 +44,7 @@ export function LoginForm() {
               />
             </Grid.Col>
             <Grid.Col className="flex justify-center">
-              <Button className=" button bg-primary-accent hover:bg-secondary-accent " onClick={userToken}>
+              <Button className=" button w-56 bg-primary-accent hover:bg-secondary-accent " onClick={userToken}>
                 ENTRAR
               </Button>
             </Grid.Col>

@@ -1,5 +1,6 @@
 import { ButtonLink, Card, Line } from "./styles";
 import { Grid, Text, Title } from "@mantine/core";
+import { Link } from "react-router-dom";
 
 export function CardTopic() {
   return (
@@ -8,7 +9,7 @@ export function CardTopic() {
       <Line>
         <Grid className="w-full">
           <Grid.Col>
-            <Title order={5} className="pb-4">Título</Title>
+            <Link to='/forum/topico'><Title order={5} className="pb-4">Título</Title></Link>
           </Grid.Col>
           <Grid.Col span={6}>
             <Text lineClamp={4}>

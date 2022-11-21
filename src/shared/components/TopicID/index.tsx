@@ -1,11 +1,29 @@
 import { Grid, Title } from "@mantine/core";
+import { InputComment } from "../InputComment";
+import { CardComment } from "./CardComment";
+import { Section } from "./styles";
 
-export function TopicID(){
-  return(
-    <Grid>
-      <Grid.Col>
-        <Title>Topico</Title>
-      </Grid.Col>
-    </Grid>
+export function TopicID() {
+  return (
+    <Section>
+      <Grid>
+        <Grid.Col>
+          <Title order={2} className="text-center">Titulo do Topico</Title>
+        </Grid.Col>
+        <Grid.Col>
+          <CardComment nameUser="Fulano" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+						the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+						of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+						but also the leap into electronic typesetting, remaining essentially unchanged. It was
+						popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+						and more recently with desktop publishing software like Aldus PageMaker including versions of
+						Lorem Ipsum."/>
+            
+            <InputComment/>
+
+          <CardComment nameUser="Cricrano" text="É verdade, Fulano. Concordo!"/>
+        </Grid.Col>
+      </Grid>
+    </Section>
   )
 }
