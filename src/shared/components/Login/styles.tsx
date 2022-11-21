@@ -19,6 +19,12 @@ export const LoginSection = styled.section`
     flex-direction: row;
     justify-content: center;
   }
+  button{
+    :hover{
+      transform: scale(1.1);
+      transition: all 0.1s;
+    }
+  }
   
 `;
 
@@ -32,6 +38,11 @@ margin: 2rem 0 4rem 0;
 export const ButtonLink = styled.button`
 color: #29A073;
 margin-left: 0.3rem;
+
+:hover{
+  transform: scale(1.1);
+  transition: all 0.1s;
+}
 
 `
 export const DropDownContent = styled.div`

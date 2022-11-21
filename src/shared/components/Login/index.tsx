@@ -44,20 +44,14 @@ export function LoginForm() {
               />
             </Grid.Col>
             <Grid.Col className="flex justify-center">
-              <Button className=" button bg-primary-accent hover:bg-secondary-accent" onClick={userToken}>
+              <Button className=" button bg-primary-accent hover:bg-secondary-accent " onClick={userToken}>
                 ENTRAR
               </Button>
             </Grid.Col>
             <Grid.Col className="flex justify-center p-0">
               <Text fz="xs" className="inline-flex">
                 Não Possui uma conta ?
-                <Dropdown>
-                  <ButtonLink>Cadastre-se</ButtonLink>
-                  <DropDownContent>
-                   <Link to='/cadastro'>Como pessoa física</Link>
-                   <Link to='/cadastro'>Como instituição</Link>
-                  </DropDownContent>
-                </Dropdown>
+                  <Link to='/cadastro'><ButtonLink>Cadastre-se</ButtonLink></Link>
               </Text>
             </Grid.Col>
           </Line>

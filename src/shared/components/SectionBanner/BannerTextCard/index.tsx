@@ -17,7 +17,7 @@ export function BannerTextCard({title, text, link}: Props){
       <p>{text}</p>
 
       <Link to={link} >
-        <Button className=" button-add bg-primary-accent hover:bg-secondary-accent" >
+        <Button className=" button bg-primary-accent hover:bg-secondary-accent" >
           Seja Membro
         </Button>
       </Link>

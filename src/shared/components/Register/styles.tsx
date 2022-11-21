@@ -10,6 +10,13 @@ export const RegisterSection = styled.section`
   width: 100%;
   height: 100%;
   padding: 2rem 10rem;
+
+  button{
+    :hover{
+      transform: scale(1.1);
+      transition: all 0.1s;
+    }
+  }
   @media (max-width: 1366px) {
     height: 100%;
   }
