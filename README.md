@@ -17,7 +17,7 @@ To start the server in development mode used at address: http://localhost:8000
 npm start
 ```
 
-## Dependências 
+## Dependencies
 - [axios](https://axios-http.com/docs/intro)
 - [mantine](https://mantine.dev/)
 - [react](https://www.npmjs.com/package/react)
@@ -27,7 +27,7 @@ npm start
 - [styled-components ](https://styled-components.com/)
 - [tailwind](https://tailwindcss.com/)
 
-## Telas
+## Screens
 ### Home
 The initial screen is the home screen, where there will be information about the organization and its collaborators, in addition to presenting the most recent forum topics. This screen can be accessed via the following route: `/`.
 ### Login
