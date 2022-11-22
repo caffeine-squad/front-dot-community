@@ -32,7 +32,7 @@ npm start
 The initial screen is the home screen, where there will be information about the organization and its collaborators, in addition to presenting the most recent forum topics. This screen can be accessed via the following route: `/`.
 ### Login
 Screen to login and enter the system. This screen can be accessed via the following route: `/login`.
-### Cadastro
+### Register
 Screen to create an account for an institution or a user who wants to be a donor or recipient.
 This screen can be accessed via the following route: `/cadastro`.
 ### Forum
