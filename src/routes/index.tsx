@@ -4,6 +4,7 @@ import { Forum } from '../pages/Forum'
 import { Login } from '../pages/Login'
 import { RegisterUser } from '../pages/Register'
 import { Topic } from '../pages/Topic'
+import { ManageUser } from '../pages/ManageUsers'
 
 
 
@@ -16,6 +17,7 @@ export const AppRoutes = () => {
       <Route path="/login" element={<Login/>}/>
       <Route path="/forum" element={<Forum/>}/>
       <Route path="/forum/topico" element={<Topic/>}/>
+      <Route path="/gerenciar/usuario" element={<ManageUser/>}/>
     </Routes>
   )
 }
