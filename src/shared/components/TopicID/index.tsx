@@ -11,9 +11,7 @@ export function TopicID() {
           <Title order={2} className="text-center">Titulo do Topico</Title>
         </Grid.Col>
         <Grid.Col>
-            
             <CardPost/>
-
           <CardComment nameUser="Cricrano" text="É verdade, Fulano. Concordo!"/>
         </Grid.Col>
       </Grid>

@@ -1,4 +1,5 @@
 import { Grid, Title } from "@mantine/core";
+import { ButtonFloat } from "../ButtonFloat";
 import { CardTopic } from "../CardTopic";
 import { Container } from "./styles";
 
@@ -17,6 +18,7 @@ export function ForumList() {
           <CardTopic/>
         </Grid.Col>
       </Grid>
+      <ButtonFloat/>
     </Container>
   )
 

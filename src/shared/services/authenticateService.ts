@@ -1,5 +1,6 @@
 import { api } from './api';
 
+
 const auth = async (email: string, password: string): Promise<any> => {
 	const resposta = await api 
 		.post('/authenticate', { email, password })
