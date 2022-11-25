@@ -54,6 +54,9 @@ div span .mantine-1gkkvdk:disabled, .mantine-1gy46q8:disabled, .mantine-wai1xk:d
 .isBackgroundGray90 {
   background: #E5E5E5;
 }
+:focus-visible{
+  outline: none;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

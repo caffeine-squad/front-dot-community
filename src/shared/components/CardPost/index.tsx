@@ -1,8 +1,10 @@
 import { Grid, Textarea, Text, Button, Divider } from "@mantine/core";
 import { IoChatbubblesOutline } from "react-icons/io5";
 import { Card, Line } from "../CardTopic/styles";
+import { useAuth } from "../../context/useAuth";
 
 export function CardPost() {
+  const user = useAuth();
   return (
     <Card>
       <Line>
@@ -29,7 +31,7 @@ export function CardPost() {
           </Grid.Col>
           <Grid.Col className="inline-flex items-center">
             <IoChatbubblesOutline className="text-2xl text-secondary-accent mr-1"/>
-            <Text className="text-secondary-accent">Fulaninha</Text>
+            <Text className="text-secondary-accent">{user.user?.name}</Text>
           </Grid.Col>
           <Grid.Col>
             <Textarea
