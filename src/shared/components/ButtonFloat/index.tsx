@@ -1,25 +1,33 @@
-import { Divider, Input, Modal, Textarea, Button } from "@mantine/core";
+import { Divider, Input, Modal, Textarea, Button, Loader } from "@mantine/core";
 import { useForm } from "@mantine/form";
 import { useEffect, useState } from "react";
 import { HiOutlinePencil } from "react-icons/hi";
 import { createTopic } from "../../services/useTopic";
 import { CreateTopic } from "../../Types/types";
 import { ButtonFloating } from "./styles";
+import { useAuth } from "../../context/useAuth";
 
+interface ButtonFloatProps{
+  checkTopic:()=> void
+}
 
-
-export function ButtonFloat() {
+export function ButtonFloat({checkTopic}:ButtonFloatProps) {
   const [opened, setOpened] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const { user } = useAuth();
+ 
 
   const form = useForm({
     initialValues: {
       title: '',
       description: '',
+      userId: user?.id,
     },
   });
+
+ 
 
   useEffect(() => {
     function HandleResize() {
@@ -28,17 +36,29 @@ export function ButtonFloat() {
 
     window.addEventListener('resize', HandleResize)
   })
+
+  const handle_close_self = () => {
+    setOpened(false)
+    form.reset()
+  }
   
-  const create_topics = (values: CreateTopic) => {
+  const create_topics = (values: CreateTopic) => {  
     const res = async () => {
-      setLoading(true)
+      setLoading(false);
       const resposta = await createTopic(values)
-      if (resposta?.status === 200) {
+      if (resposta?.status === 201) {
         setData(resposta?.data);
+        checkTopic();
+        handle_close_self();
       }
-      setLoading(false)
+      setLoading(true)
     }
     res();
+    
+  }
+
+  function criar(values: CreateTopic) {
+    create_topics(values)
   }
 
 return (
@@ -51,8 +71,12 @@ return (
       opened={opened}
       onClose={() => setOpened(false)}
     >
-    <form onSubmit={form.onSubmit((values) => create_topics(values))}>
-      <div className="flex">
+    <form onSubmit={form.onSubmit((values) => criar(values))}>
+      {!loading ?
+      <Loader/>
+      : (
+        <>
+              <div className="flex">
         <HiOutlinePencil className=" flex self-center text-2xl" />
         <h1 className="font-bold text-xl ml-4">
           Criar Topico
@@ -79,15 +103,17 @@ return (
             {...form.getInputProps('description')}
           />
         </div>
-      </div>
-      <div className="flex jsutidy-end mr-1">
+      </div></>
+      )}
+
+      <div className="flex justify-end mr-1">
         <Button className=" button w-32 bg-primary-error hover:bg-secondary-error mr-4">Cancelar</Button>
-        <Button className=" button w-32 bg-primary-accent hover:bg-secondary-accent " type="submit">Criar</Button>
+        <Button className=" button w-32 bg-primary-accent hover:bg-secondary-accent " type="submit" >Criar</Button>
       </div>
       </form>
     </Modal>
 
-    <ButtonFloating onClick={() => setOpened(true)}><HiOutlinePencil className="flex inline-flex text-[1.2rem] mr-[0.4rem]/" />Criar Tópico</ButtonFloating>
+    <ButtonFloating onClick={() => setOpened(true)} ><HiOutlinePencil className="flex inline-flex text-[1.2rem] mr-[0.4rem]/" />Criar Tópico</ButtonFloating>
   </>
 )
 }

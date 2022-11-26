@@ -14,7 +14,7 @@ export const AppRoutes = () => {
       <Route path="/cadastro" element={<RegisterUser/>} />
       <Route path="/login" element={<Login/>}/>
       <Route element={<RequireAuth />}>
-        <Route path="/forum/topico/:topicoId" element={<Topic/>}/>
+        <Route path="/forum/topico/:id" element={<Topic/>}/>
         <Route path="/user" element={<EditUsers/>}/>
         <Route path="/forum" element={<Forum/>}/>
       </Route>

@@ -14,6 +14,8 @@ export interface TypeTopic {
   title: string,
   description: string,
   creationDate: Date,
+  userName: string
+  numberOfComments:{Comment: number}
 }
 
 export interface CreateTopic {

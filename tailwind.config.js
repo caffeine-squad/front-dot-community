@@ -14,8 +14,8 @@ module.exports = {
         'secondary-accent': '#29A073',
         'yellow-accent': '#FFE74C',
         'secondary-tint': '#E8F6FF',
-        'primary-error': '#f0664a',
-        'secondary-error': '#D7573D',
+        'primary-error': '#c41111',
+        'secondary-error': '#7d0a0a',
       },
       container: {
         padding: {
