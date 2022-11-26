@@ -13,7 +13,7 @@ import { useAuth } from "../../context/useAuth";
 
 
 export function Header() {
-  const { authenticated, logout } = useAuth();
+  const { authenticated, logout, user } = useAuth();
   return (
     <>
       <Container>
@@ -30,6 +30,13 @@ export function Header() {
             {authenticated === true ?
               <NavItem>
                 <NavLink to='/forum'><span>Forum</span></NavLink>
+              </NavItem>
+              :
+              <></>
+            }
+             {authenticated === true && user?.userType === 'Admin'?
+              <NavItem>
+                <NavLink to='/forum'><span>User</span></NavLink>
               </NavItem>
               :
               <></>

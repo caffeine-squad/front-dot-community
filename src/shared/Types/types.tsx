@@ -1,6 +1,7 @@
 export interface User{
   id: number,
   name: string,
+  userType: string,
 }
 
 export interface LoginRequest {
@@ -18,6 +19,7 @@ export interface TypeTopic {
 export interface CreateTopic {
   title: string,
   description: string,
+  userId?: number
 }
 
 export interface GetUser {
