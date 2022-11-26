@@ -12,10 +12,10 @@ module.exports = {
       colors: {
         'primary-accent': '#62D2A2',
         'secondary-accent': '#29A073',
-        'bleached-accent': '#9dd9ff',
+        'yellow-accent': '#FFE74C',
         'secondary-tint': '#E8F6FF',
-        'light-error': '#f0664a',
-        'primary-gray': '#A6ABBB',
+        'primary-error': '#c41111',
+        'secondary-error': '#7d0a0a',
       },
       container: {
         padding: {

@@ -9,8 +9,11 @@ import {
 }
   from "./styles";
 
+import { useAuth } from "../../context/useAuth";
+
 
 export function Header() {
+  const { authenticated, logout, user } = useAuth();
   return (
     <>
       <Container>
@@ -24,15 +27,29 @@ export function Header() {
             <NavItem>
               <NavLink to='/'><span>Sobre nós</span></NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink to='/forum'><span>Forum</span></NavLink>
-            </NavItem>
+            {authenticated === true ?
               <NavItem>
-                <NavLink to='/cadastro'><span>Cadastro</span></NavLink>
+                <NavLink to='/forum'><span>Forum</span></NavLink>
               </NavItem>
-           
+              :
+              <></>
+            }
+             {authenticated === true && user?.userType === 'Admin'?
+              <NavItem>
+                <NavLink to='/forum'><span>User</span></NavLink>
+              </NavItem>
+              :
+              <></>
+            }
             <NavItem>
-              <NavLink to='/login'><span>Login</span></NavLink>
+              <NavLink to='/cadastro'><span>Cadastro</span></NavLink>
+            </NavItem>
+
+            <NavItem>
+              {authenticated === false ? <NavLink to='/login'><span>Login</span></NavLink> :
+                <NavLink to='/login' onClick={logout}><span>Sair</span></NavLink>
+              }
+
             </NavItem>
           </NavMenu>
         </NavbarContainer>
