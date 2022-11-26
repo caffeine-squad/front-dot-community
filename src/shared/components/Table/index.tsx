@@ -12,7 +12,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface TableSelectionProps {
+interface GetUser {
   data: { 
     id: string;
     name: string; 
@@ -21,7 +21,7 @@ interface TableSelectionProps {
   }[]
 }
 
-export function ManageTable({ data }: TableSelectionProps) {
+export function ManageTable({ data }: GetUser) {
 
   const { classes, cx } = useStyles();
   const [selection, setSelection] = useState(['0']);

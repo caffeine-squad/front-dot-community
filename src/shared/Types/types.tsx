@@ -19,3 +19,10 @@ export interface CreateTopic {
   title: string,
   description: string,
 }
+
+export interface GetUser {
+  id: string,
+  name: string,
+  email: string, 
+  userType: string, 
+}
