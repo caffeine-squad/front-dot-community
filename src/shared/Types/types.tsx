@@ -26,5 +26,5 @@ export interface GetUser {
   id: string,
   name: string,
   email: string, 
-  userType: string, 
+  cellPhone: string, 
 }

@@ -36,7 +36,7 @@ export function Header() {
             }
              {authenticated === true && user?.userType === 'Admin'?
               <NavItem>
-                <NavLink to='/forum'><span>User</span></NavLink>
+                <NavLink to='/gerenciar/usuario'><span>Usuários</span></NavLink>
               </NavItem>
               :
               <></>
